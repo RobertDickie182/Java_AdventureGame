@@ -18,4 +18,6 @@ public abstract class Spell implements ISpell {
     public int getMagicDamage() {
         return magicDamage;
     }
+
+
 }
