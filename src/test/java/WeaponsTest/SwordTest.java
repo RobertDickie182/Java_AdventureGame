@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 public class SwordTest {
 
-    IWeapon sword;
+    Sword sword;
     Enemy enemy;
 
     @Before public void before(){
