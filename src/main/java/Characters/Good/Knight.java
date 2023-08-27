@@ -8,8 +8,11 @@ public class Knight extends Fighter {
         super(name, playerHealth, weapon);
     }
 
+
+
     @Override
     public void attack(Enemy enemy) {
 
     }
 }
+
