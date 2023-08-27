@@ -12,7 +12,12 @@ public abstract class Enemy {
         return enemyHealth;
     }
 
-    public void takeDamage(int damage) {
+    public String takeDamage(int damage) {
         this.enemyHealth -= damage;
+        if (this.enemyHealth <= 0) {
+            return "This enemy has been vanquised";
+        }
+        return "The enemy is wounded";
     }
+
 }

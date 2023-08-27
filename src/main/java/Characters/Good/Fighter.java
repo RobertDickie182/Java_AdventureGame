@@ -1,9 +1,10 @@
 package Characters.Good;
 
+import Characters.Bad.Enemy;
 import Weapons.IWeapon;
 
 
-public abstract class Fighter extends Player implements IWeapon {
+public abstract class Fighter extends Player {
 
     private IWeapon weapon;
 
@@ -20,5 +21,9 @@ public abstract class Fighter extends Player implements IWeapon {
         this.weapon = weapon;
     }
 
+
+    public void attack(Enemy enemy) {
+        weapon.attack(enemy);
+    }
 
 }

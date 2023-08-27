@@ -1,5 +1,8 @@
 package Characters.Good;
 
+import Characters.Bad.Enemy;
+import Weapons.IWeapon;
+
 public abstract class Player {
 
     private String name;
@@ -22,4 +25,9 @@ public abstract class Player {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void takeDamage(int damagePoints){
+        this.playerHealth -= damagePoints;
+    }
+
 }

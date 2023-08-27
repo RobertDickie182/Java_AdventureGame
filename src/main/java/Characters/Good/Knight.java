@@ -9,10 +9,5 @@ public class Knight extends Fighter {
     }
 
 
-
-    @Override
-    public void attack(Enemy enemy) {
-
-    }
 }
 

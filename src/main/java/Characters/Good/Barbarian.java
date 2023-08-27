@@ -8,8 +8,4 @@ public class Barbarian extends Fighter {
         super(name, playerHealth, weapon);
     }
 
-    @Override
-    public void attack(Enemy enemy) {
-
-    }
 }

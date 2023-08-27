@@ -8,8 +8,7 @@ public class Dwarf extends Fighter {
         super(name, playerHealth, weapon);
     }
 
-    @Override
-    public void attack(Enemy enemy) {
 
-    }
+
+
 }
