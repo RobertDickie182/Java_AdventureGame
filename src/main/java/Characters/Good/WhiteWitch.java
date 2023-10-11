@@ -16,8 +16,5 @@ public class WhiteWitch extends Mage {
 
     }
 
-    @Override
-    public void cast(Enemy enemy) {
-
-    }
 }
+

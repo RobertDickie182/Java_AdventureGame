@@ -15,7 +15,7 @@ public abstract class Enemy {
     public String takeDamage(int damage) {
         this.enemyHealth -= damage;
         if (this.enemyHealth <= 0) {
-            return "This enemy has been vanquised";
+            return "This enemy has been vanquished";
         }
         return "The enemy is wounded";
     }

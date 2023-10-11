@@ -4,6 +4,8 @@ import Characters.Bad.Enemy;
 
 public class Freeze extends Spell {
 
+    public Freeze() {
+    }
 
 
 

@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 public class AxeTest {
 
-    Axe axe;
+    IWeapon axe;
 
     Troll troll;
 
