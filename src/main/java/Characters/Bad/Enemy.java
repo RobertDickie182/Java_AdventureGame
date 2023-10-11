@@ -1,5 +1,8 @@
 package Characters.Bad;
 
+import Characters.Good.Fighter;
+import Characters.Good.Player;
+
 public abstract class Enemy {
 
     private int enemyHealth;
@@ -19,5 +22,6 @@ public abstract class Enemy {
         }
         return "The enemy is wounded";
     }
+
 
 }
