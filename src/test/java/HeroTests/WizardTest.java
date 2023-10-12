@@ -3,7 +3,6 @@ package HeroTests;
 import Characters.Bad.Enemy;
 import Characters.Bad.Orc;
 import Characters.Good.Mage;
-import Characters.Good.WhiteWitch;
 import Characters.Good.Wizard;
 import Defense.DireWolf;
 import Defense.IDefend;
@@ -50,6 +49,17 @@ public class WizardTest {
     @Test
     public void canCastSpell(){
         wizard.cast(enemy);
+        assertEquals(30, enemy.getEnemyHealth());
+    }
+
+    @Test
+    public void hasDefender() {
+        assertEquals(direWolf, wizard.getDefender());
+    }
+
+    @Test
+    public void canUseDefender() {
+        wizard.defend(enemy);
         assertEquals(30, enemy.getEnemyHealth());
     }
 }

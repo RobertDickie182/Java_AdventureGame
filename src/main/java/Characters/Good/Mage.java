@@ -1,6 +1,7 @@
 package Characters.Good;
 
 import Characters.Bad.Enemy;
+import Defense.Defender;
 import Defense.IDefend;
 import Magic.ISpell;
 
@@ -23,6 +24,15 @@ public abstract class Mage extends Player implements ISpell, IDefend {
 
     public ISpell getSpell() {
         return spell;
+    }
+
+    public IDefend getDefender() {
+        return defender;
+    }
+
+    public void defend(Enemy enemy){
+        defender.defend(enemy);
+
     }
 
     public void setDefend(IDefend defend) {

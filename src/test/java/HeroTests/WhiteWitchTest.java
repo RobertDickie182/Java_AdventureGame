@@ -6,6 +6,7 @@ import Characters.Good.Mage;
 import Characters.Good.WhiteWitch;
 import Defense.DireWolf;
 import Defense.IDefend;
+import Magic.FlameBurst;
 import Magic.Freeze;
 import Magic.ISpell;
 import org.junit.Before;
@@ -19,11 +20,13 @@ public class WhiteWitchTest {
     Enemy enemy;
 
     ISpell freeze;
+    ISpell flameBurst;
 
     IDefend direWolf;
 
     @Before public void before(){
         freeze = new Freeze();
+        flameBurst = new FlameBurst();
         direWolf = new DireWolf("Shadow");
         enemy = new Orc(50);
         whiteWitch = new WhiteWitch("Helen", 100, freeze, direWolf);
@@ -48,6 +51,24 @@ public class WhiteWitchTest {
     @Test
     public void canCastSpell(){
         whiteWitch.cast(enemy);
+        assertEquals(30, enemy.getEnemyHealth());
+    }
+
+    @Test
+    public void canSwitchSpell() {
+        whiteWitch.setSpell(flameBurst);
+        whiteWitch.cast(enemy);
+        assertEquals(20, enemy.getEnemyHealth());
+    }
+
+    @Test
+    public void hasDefender(){
+        assertEquals(direWolf, whiteWitch.getDefender());
+    }
+
+    @Test
+    public void canUseDefender() {
+        whiteWitch.defend(enemy);
         assertEquals(30, enemy.getEnemyHealth());
     }
 }

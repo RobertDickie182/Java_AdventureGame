@@ -11,10 +11,6 @@ public class WhiteWitch extends Mage {
         super(name, playerHealth, spell, defender);
     }
 
-    @Override
-    public void defend(Enemy enemy) {
-
-    }
 
 }
 
