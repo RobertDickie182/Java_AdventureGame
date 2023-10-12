@@ -22,6 +22,7 @@ public class Cleric extends Player implements IHeal {
 
     @Override
     public void heal(Player player) {
+        healingObject.heal(player);
 
     }
 }
