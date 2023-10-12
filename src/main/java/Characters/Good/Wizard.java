@@ -16,8 +16,4 @@ public class Wizard extends Mage {
 
     }
 
-    @Override
-    public void cast(Enemy enemy) {
-
-    }
 }
