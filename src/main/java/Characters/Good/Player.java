@@ -30,4 +30,8 @@ public abstract class Player {
         this.playerHealth -= damagePoints;
     }
 
+    public void playerHeal(int healingValue){
+        this.playerHealth += healingValue;
+    }
+
 }
