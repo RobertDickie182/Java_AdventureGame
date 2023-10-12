@@ -11,6 +11,7 @@ public class Potion extends HealingObject {
 
     @Override
     public void heal(Player player) {
+        player.playerHeal(80);
 
     }
 }
