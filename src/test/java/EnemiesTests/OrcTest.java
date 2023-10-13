@@ -35,7 +35,7 @@ public class OrcTest {
 
     @Test
     public void canAttack() {
-        orc.attack(dwarf);
+        orc.enemyAttack(dwarf);
         assertEquals(80, dwarf.getPlayerHealth());
     }
 }

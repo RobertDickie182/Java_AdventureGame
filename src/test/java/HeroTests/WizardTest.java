@@ -42,6 +42,12 @@ public class WizardTest {
     }
 
     @Test
+    public void canTakeDamage() {
+        enemy.enemyAttack(wizard);
+        assertEquals(80, wizard.getPlayerHealth());
+    }
+
+    @Test
     public void hasSpell(){
         assertEquals(freeze, wizard.getSpell());
     }

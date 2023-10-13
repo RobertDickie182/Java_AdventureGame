@@ -26,8 +26,12 @@ public abstract class Player {
         this.name = name;
     }
 
-    public void takeDamage(int damagePoints){
+    public String takeDamage(int damagePoints){
         this.playerHealth -= damagePoints;
+        if (this.playerHealth <= 0) {
+            return "Your hero is dead!";
+        }
+        return "Your hero has taken damage";
     }
 
     public void playerHeal(int healingValue){

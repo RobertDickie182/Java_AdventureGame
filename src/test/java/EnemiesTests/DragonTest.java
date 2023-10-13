@@ -34,7 +34,7 @@ public class DragonTest {
 
     @Test
     public void canAttack() {
-        dragon.attack(knight);
+        dragon.enemyAttack(knight);
         assertEquals(50, knight.getPlayerHealth());
     }
 }

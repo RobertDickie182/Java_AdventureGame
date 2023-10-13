@@ -1,6 +1,5 @@
 package EnemiesTests;
 
-import Characters.Bad.Enemy;
 import Characters.Bad.Troll;
 import Characters.Good.Barbarian;
 import Characters.Good.Fighter;
@@ -30,7 +29,7 @@ public class TrollTest {
 
     @Test
     public void canAttack() {
-        troll.attack(barbarian);
+        troll.enemyAttack(barbarian);
         assertEquals(75, barbarian.getPlayerHealth());
     }
 

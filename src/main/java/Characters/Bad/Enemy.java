@@ -1,9 +1,10 @@
 package Characters.Bad;
 
 import Characters.Good.Fighter;
+import Characters.Good.Mage;
 import Characters.Good.Player;
 
-public abstract class Enemy {
+public abstract class Enemy implements IEnemyAttack {
 
     private int enemyHealth;
 
@@ -23,5 +24,8 @@ public abstract class Enemy {
         return "The enemy is wounded";
     }
 
-
+//    @Override
+//    public void enemyAttack(Player player) {
+//
+//    }
 }

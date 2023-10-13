@@ -7,7 +7,7 @@ public class Troll extends Enemy {
         super(enemyHealth);
     }
 
-    public void attack(Player player) {
+    public void enemyAttack(Player player) {
         player.takeDamage(25);
     }
 }

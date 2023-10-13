@@ -8,7 +8,7 @@ public class Orc extends Enemy {
         super(enemyHealth);
     }
 
-    public void attack(Player player) {
+    public void enemyAttack(Player player) {
         player.takeDamage(20);
     }
 }

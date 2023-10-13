@@ -1,6 +1,5 @@
 package HeroTests;
 
-import Characters.Bad.Enemy;
 import Characters.Bad.Orc;
 import Characters.Good.Mage;
 import Characters.Good.WhiteWitch;
@@ -17,7 +16,7 @@ import static org.junit.Assert.assertEquals;
 public class WhiteWitchTest {
 
     Mage whiteWitch;
-    Enemy enemy;
+    Orc orc;
 
     ISpell freeze;
     ISpell flameBurst;
@@ -28,7 +27,7 @@ public class WhiteWitchTest {
         freeze = new Freeze();
         flameBurst = new FlameBurst();
         direWolf = new DireWolf("Shadow");
-        enemy = new Orc(50);
+        orc = new Orc(50);
         whiteWitch = new WhiteWitch("Helen", 100, freeze, direWolf);
 
     }
@@ -44,21 +43,27 @@ public class WhiteWitchTest {
     }
 
     @Test
+    public void canTakeDamage() {
+        orc.enemyAttack(whiteWitch);
+        assertEquals(80, whiteWitch.getPlayerHealth());
+    }
+
+    @Test
     public void hasSpell(){
         assertEquals(freeze, whiteWitch.getSpell());
     }
 
     @Test
     public void canCastSpell(){
-        whiteWitch.cast(enemy);
-        assertEquals(30, enemy.getEnemyHealth());
+        whiteWitch.cast(orc);
+        assertEquals(30, orc.getEnemyHealth());
     }
 
     @Test
     public void canSwitchSpell() {
         whiteWitch.setSpell(flameBurst);
-        whiteWitch.cast(enemy);
-        assertEquals(20, enemy.getEnemyHealth());
+        whiteWitch.cast(orc);
+        assertEquals(20, orc.getEnemyHealth());
     }
 
     @Test
@@ -68,8 +73,8 @@ public class WhiteWitchTest {
 
     @Test
     public void canUseDefender() {
-        whiteWitch.defend(enemy);
-        assertEquals(30, enemy.getEnemyHealth());
+        whiteWitch.defend(orc);
+        assertEquals(30, orc.getEnemyHealth());
     }
 }
 
